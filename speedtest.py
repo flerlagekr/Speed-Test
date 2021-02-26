@@ -3,7 +3,7 @@
 #  This code is in the public domain
 
 import sys
-import speedtest
+import speedtest  # To install using pip, run "pip install speedtest-cli"
 from datetime import datetime
 import gspread
 import os
