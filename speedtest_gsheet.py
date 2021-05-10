@@ -17,9 +17,9 @@ computerName = os.environ['COMPUTERNAME']
 scope = ['https://spreadsheets.google.com/feeds']
 
 # Read API key from a local json file, authorize with Google, then open the spreadsheet
-credentials = ServiceAccountCredentials.from_json_keyfile_name('C:/Users/Ken/Documents/Ken/Blog/My Vizzes/Python/creds.json', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('<creds file>', scope)
 gc = gspread.authorize(credentials) 
-sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1CinsOfGyAFWbEERqAWwL-47Ev6UMdvS3d9i__UwmajQ')
+sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/<gsheet ID>')
 worksheet = sheet.get_worksheet(0)
 
 timeStamp = datetime.now()
